@@ -1,0 +1,7 @@
+{
+  "xsappname": "project1",
+  "tenant-mode": "dedicated",
+  "description": "Security profile for Project 1",
+  "scopes": [],
+  "role-templates": []
+}

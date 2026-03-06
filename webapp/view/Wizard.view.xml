@@ -1,0 +1,185 @@
+<!-- <mvc:View controllerName="project1.controller.Wizard"
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+    <Page title="Review &amp; Submit BP" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <Wizard id="bpWizard" complete="onWizardCompleted">
+                
+                <WizardStep id="step1" title="Basic Info" validated="true">
+                    <form:SimpleForm editable="true" layout="ResponsiveGridLayout">
+                        <Label text="Business Partner ID (New)" />
+                        <Input value="{wizardData>/BusinessPartner}" placeholder="Auto-generated" editable="false"/>
+
+                        <Label text="Category" />
+                        <Input value="{wizardData>/BusinessPartnerCategory}" />
+
+                        <Label text="Full Name" />
+                        <Input value="{wizardData>/BusinessPartnerFullName}" />
+
+                        <Label text="Grouping" />
+                        <Input value="{wizardData>/BusinessPartnerGrouping}" />
+
+                        <Label text="BP Name" />
+                        <Input value="{wizardData>/BusinessPartnerName}" />
+
+                        <Label text="Created By" />
+                        <Input value="{wizardData>/CreatedByUser}" editable="false"/>
+
+                        <Label text="First Name" />
+                        <Input value="{wizardData>/FirstName}" />
+                    </form:SimpleForm>
+                </WizardStep>
+
+                <WizardStep id="step2" title="Review Address" validated="true">
+                    <form:SimpleForm editable="true" layout="ResponsiveGridLayout">
+                        <Label text="Address ID" />
+                        <Input value="{wizardData>/Address/AddressID}" editable="false"/>
+
+                        <Label text="Time Zone" />
+                        <Input value="{wizardData>/Address/AddressTimeZone}" />
+
+                        <Label text="City Code" />
+                        <Input value="{wizardData>/Address/CityCode}" />
+
+                        <Label text="City Name" />
+                        <Input value="{wizardData>/Address/CityName}" />
+
+                        <Label text="Postal Code" />
+                        <Input value="{wizardData>/Address/CompanyPostalCode}" />
+
+                        <Label text="Country" />
+                        <Input value="{wizardData>/Address/Country}" />
+
+                        <Label text="Person" />
+                        <Input value="{wizardData>/Address/Person}" />
+                    </form:SimpleForm>
+                </WizardStep>
+
+                <WizardStep id="step3" title="Review Roles" validated="true">
+                    <Table items="{wizardData>/Roles}">
+                        <headerToolbar>
+                            <Toolbar>
+                                <Title text="Assigned Roles"/>
+                            </Toolbar>
+                        </headerToolbar>
+                        <columns>
+                            <Column><Text text="Business Partner ID"/></Column>
+                            <Column><Text text="Role Category"/></Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{wizardData>BusinessPartner}" />
+                                    <Input value="{wizardData>BusinessPartnerRole}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </WizardStep>
+
+            </Wizard>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="Submit" press="onWizardCompleted" type="Emphasized"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View> -->
+
+
+<mvc:View controllerName="project1.controller.Wizard"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m" 
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    height="100%">
+    
+    <Page title="Review &amp; Submit BP" showNavButton="true" navButtonPress="onNavBack" class="pageGrayBackground">
+        <content>
+            <VBox alignItems="Center" justifyContent="Center" class="fullScreenCenterBox">
+                
+                <VBox class="wizardRedBoxFrame">
+                    <Wizard id="bpWizard" complete="onWizardCompleted">
+                        
+                        <WizardStep id="step1" title="Basic Info" validated="true">
+                            <form:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" columnsL="1" columnsM="1">
+                                <core:Title text="1. Basic Info" />
+                                
+                                <Label text="Business Partner ID (New)" />
+                                <Input value="{wizardData>/BusinessPartner}" editable="false"/>
+
+                                <Label text="Category" />
+                                <Input value="{wizardData>/BusinessPartnerCategory}" />
+
+                                <Label text="Full Name" />
+                                <Input value="{wizardData>/BusinessPartnerFullName}" />
+
+                                <Label text="Grouping" />
+                                <Input value="{wizardData>/BusinessPartnerGrouping}" />
+
+                                <Label text="BP Name" />
+                                <Input value="{wizardData>/BusinessPartnerName}" />
+
+                                <Label text="Created By" />
+                                <Input value="{wizardData>/CreatedByUser}" editable="false"/>
+
+                                <Label text="First Name" />
+                                <Input value="{wizardData>/FirstName}" />
+                            </form:SimpleForm>
+                        </WizardStep>
+
+                        <WizardStep id="step2" title="Review Address" validated="true">
+                            <form:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" columnsL="1" columnsM="1">
+                                <core:Title text="2. Address Details" />
+                                <Label text="Address ID" />
+                                <Input value="{wizardData>/Address/AddressID}" editable="false"/>
+                                <Label text="Time Zone" />
+                                <Input value="{wizardData>/Address/AddressTimeZone}" />
+                                <Label text="City Code" />
+                                <Input value="{wizardData>/Address/CityCode}" />
+                                <Label text="City Name" />
+                                <Input value="{wizardData>/Address/CityName}" />
+                                <Label text="Postal Code" />
+                                <Input value="{wizardData>/Address/CompanyPostalCode}" />
+                                <Label text="Country" />
+                                <Input value="{wizardData>/Address/Country}" />
+                                <Label text="Person" />
+                                <Input value="{wizardData>/Address/Person}" />
+                            </form:SimpleForm>
+                        </WizardStep>
+
+                        <WizardStep id="step3" title="Review Roles" validated="true">
+                            <Table items="{wizardData>/Roles}">
+                                <headerToolbar>
+                                    <Toolbar>
+                                        <Title text="Assigned Roles"/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column><Text text="Business Partner ID"/></Column>
+                                    <Column><Text text="Role Category"/></Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Text text="{wizardData>BusinessPartner}" />
+                                            <Input value="{wizardData>BusinessPartnerRole}" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </WizardStep>
+
+                    </Wizard>
+                </VBox>
+            </VBox>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="Submit" press="onWizardCompleted" type="Emphasized"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

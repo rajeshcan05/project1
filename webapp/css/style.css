@@ -1,0 +1,28 @@
+/* 1. Makes the whole page background gray so the white box stands out */
+.pageGrayBackground {
+    background-color: #f2f2f2 !important;
+}
+
+/* 2. Forces the container to take up the whole screen area for centering */
+.fullScreenCenterBox {
+    height: 100% !important;
+    width: 100% !important;
+    padding: 2rem; /* Keeps it from touching the absolute edges of the screen */
+    box-sizing: border-box;
+}
+
+/* 3. THIS IS YOUR RED SQUARE. It forces the 80% width and 75% height. */
+.wizardRedBoxFrame {
+    width: 80% !important;
+    height: 75vh !important; /* 75% of the viewport height */
+    background-color: #ffffff;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15); /* Adds the floating card shadow */
+    border-radius: 8px; /* Slightly rounded corners */
+    overflow: hidden; /* Prevents the wizard from overflowing the box */
+}
+
+/* 4. Forces the Wizard itself to fill the red square */
+.wizardRedBoxFrame .sapMWizard {
+    height: 100% !important;
+    width: 100% !important;
+}

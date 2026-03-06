@@ -1,0 +1,24 @@
+{
+  "name": "project1",
+  "version": "0.0.1",
+  "description": "An SAP Fiori application.",
+  "keywords": [
+    "ui5",
+    "openui5",
+    "sapui5"
+  ],
+  "main": "webapp/index.html",
+  "devDependencies": {
+    "@sap/ux-ui5-tooling": "1",
+    "@ui5/cli": "^4.0.0",
+    "mbt": "^1.2.18",
+    "rimraf": "^5.0.0",
+    "ui5-task-zipper": "^3.0.0"
+  },
+  "scripts": {
+    "start": "fiori run --open \"test/flp.html#app-preview\"",
+    "build": "ui5 build --config=ui5-deploy.yaml --clean-dest --dest dist",
+    "deploy": "npm run build && mbt build && cf deploy mta_archives/project1_0.0.1.mtar -f"
+  },
+  "sapuxLayer": "CUSTOMER_BASE"
+}
