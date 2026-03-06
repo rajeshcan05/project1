@@ -1,3 +1,9 @@
+
+<img width="1792" height="1120" alt="Screenshot 2026-03-06 at 1 25 22 PM" src="https://github.com/user-attachments/assets/1667ef28-936b-4f63-a891-2853ed04167d" />
+
+<img width="1792" height="1120" alt="Screenshot 2026-03-06 at 1 25 32 PM" src="https://github.com/user-attachments/assets/475ca749-7d64-4775-84dd-b5a0dbd46626" />
+
+
 ## Application Details
 |               |
 | ------------- |
